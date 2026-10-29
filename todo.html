@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Todo</title>
+
+    <link rel="stylesheet" href="todo.css">
+</head>
+
+<body>
+
+    <div class="outer">
+
+        <h1>My Todo</h1>
+        <p>Manage your tasks</p>
+
+        <!-- Add Todo -->
+        <div>
+            <input id="taskEnter" type="text" placeholder="Enter your task">
+            <button id="addButton">Add</button>
+            
+        </div>
+
+        <!-- Filters -->
+        <div>
+            <button id="buttonAll">All</button>
+            <button id="activeB">Active</button>
+            <button id="completedB">Completed</button>
+        </div>
+
+        <!-- Todo List -->
+        <div id="todoList">
+            <p id="emptyState">No tasks yet</p>
+        </div>
+
+        <!-- Task Count & Clear -->
+        <div>
+            <p id="taskCount">0 tasks remaining</p>
+            <button id="clearCom">Clear Completed</button>
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="todo.js"></script>
+
+</body>
+
+</html>

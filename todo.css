@@ -1,0 +1,180 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f3f3f3;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Box */
+.outer {
+    width: min(500px, 100%);
+    min-height: 600px;
+    background-color: wheat;
+    border: 2px solid black;
+    border-radius: 20px;
+    text-align: center;
+    padding: 50px 30px;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.25);
+    transition: 0.3s ease;
+}
+
+.outer:hover {
+    transform: translateY(-5px);
+    box-shadow: 12px 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading and Subtitle */
+.outer h1 {
+    margin-bottom: 10px;
+}
+
+.outer > p {
+    margin-bottom: 30px;
+}
+
+/* Inner Boxes */
+.outer > div {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #999;
+    border-radius: 12px;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+}
+
+.outer > div:hover {
+    transform: translateY(-3px);
+    box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Input */
+.outer input[type="text"] {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.outer input[type="text"]:focus {
+    border-color: black;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.outer button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.outer button:hover {
+    transform: translateY(-3px);
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.outer button:active {
+    transform: scale(0.95);
+}
+
+/* Add Button */
+.outer input + button {
+    background-color: black;
+    color: white;
+}
+
+/* Empty State */
+.outer > div p {
+    margin: 10px;
+}
+
+/* Responsive: phones and tablets */
+@media (max-width: 600px) {
+    body {
+        align-items: flex-start;
+        padding: 16px 10px;
+    }
+
+    .outer {
+        width: 100%;
+        min-height: auto;
+        padding: 30px 14px;
+        border-radius: 16px;
+    }
+
+    .outer:hover,
+    .outer > div:hover {
+        transform: none;
+    }
+
+    .outer > div {
+        padding: 12px 8px;
+    }
+
+    .outer input[type="text"] {
+        width: 100%;
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+
+    .outer input + button {
+        min-height: 44px;
+        min-width: 80px;
+    }
+
+    .outer button {
+        padding: 10px 12px;
+        margin: 4px 2px;
+        min-height: 40px;
+    }
+
+    /* Task row */
+    .task-item {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 6px;
+        overflow-wrap: anywhere;
+        text-align: left;
+    }
+
+    .task-item span {
+        flex: 1;
+        min-width: 100px;
+        overflow-wrap: anywhere;
+    }
+
+    .task-item button {
+        flex-shrink: 0;
+    }
+
+    .outer h1 {
+        font-size: 26px;
+    }
+}
+
+/* Very narrow phones */
+@media (max-width: 360px) {
+    .outer {
+        padding: 24px 10px;
+    }
+
+    .outer button {
+        padding: 9px 10px;
+        font-size: 13px;
+    }
+}
